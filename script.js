@@ -5,7 +5,7 @@ const askButton = document.getElementById('askButton')
 const aiResponse = document.getElementById('aiResponse')
 const form = document.getElementById('form')
 
-const markdownToHTML = (text) =>{
+const markdownToHTML = (text) => {
   const converter = new showdown.Converter()
   return converter.makeHtml(text)
 }
@@ -14,8 +14,8 @@ const markdownToHTML = (text) =>{
 //AIzaSyAQIWAOix9kWw12UWGp2axfYxC0pjN7tWg//
 
 const perguntarAI = async (question, game, apiKey) => {
-  const model = "gemini-2.5-flash"
-  const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
+const model = "gemini-2.5-flash"
+const geminiURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`
   const pergunta = `
     ## Especialidade
     Você é um especialista assistente de meta para o jogo ${game}.
